@@ -115,14 +115,28 @@ export default function LandingPage() {
                   className='w-full h-auto'
                   priority
                 />
-                <div>
+                <div className='relative'>
                   <Badge variant='secondary' className='mb-8'>
                     Scheudule a Consultation
                   </Badge>
                   <h1 className='text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6'>
                     Don&apos;t wait to get started.
                     <br />
-                    Scheudle your call today and watch your score grow
+                    Scheudle your call today and watch your score grow!
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      viewBox='0 0 24 24'
+                      strokeWidth={1.5}
+                      stroke='currentColor'
+                      fill='none'
+                      className='size-48 absolute left-20 -bottom-20 stroke-indigo-500'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941'
+                      />
+                    </svg>
                   </h1>
                   <CalendlyLink>
                     <Button

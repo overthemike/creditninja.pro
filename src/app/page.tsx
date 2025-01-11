@@ -1,16 +1,5 @@
-import Link from 'next/link'
+import LandingPage from '@/app/stars/page'
 
-const Home = () => {
-  return (
-    <ul>
-      <li>
-        <Link href='/stars'>Stars</Link>
-      </li>
-      <li>
-        <Link href='/vortex'>Vortex</Link>
-      </li>
-    </ul>
-  )
-}
+const Home = () => <LandingPage />
 
 export default Home

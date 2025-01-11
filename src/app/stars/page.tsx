@@ -12,6 +12,11 @@ import { ShootingStars } from '@/components/ui/shooting-stars'
 import { StarsBackground } from '@/components/ui/stars-background'
 import NinjaLogo from '@/components/ninja-logo'
 import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
+import CalendlyLink from '@/components/calendly/popup-text'
+import PrivacyPolicy from '@/app/privacy/page'
+import TermsOfService from '@/app/terms/page'
+import ContactForm from '@/app/contact/page'
+import testimonials from '@/app/testimonials'
 
 export default function LandingPage() {
   const [darkMode, setDarkMode] = useState(false)
@@ -28,44 +33,6 @@ export default function LandingPage() {
     localStorage.setItem('darkMode', newDarkMode.toString())
     document.documentElement.classList.toggle('dark', newDarkMode)
   }
-
-  const testimonials = [
-    {
-      quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: 'Sarah Chen',
-      designation: 'Product Manager at TechFlow',
-      src: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-      quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: 'Michael Rodriguez',
-      designation: 'CTO at InnovateSphere',
-      src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-      quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: 'Emily Watson',
-      designation: 'Operations Director at CloudScale',
-      src: 'https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-      quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: 'James Kim',
-      designation: 'Engineering Lead at DataPro',
-      src: 'https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    },
-    {
-      quote:
-        'The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.',
-      name: 'Lisa Thompson',
-      designation: 'VP of Technology at FutureNet',
-      src: 'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    }
-  ]
 
   return (
     <div className='min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-200'>
@@ -110,15 +77,17 @@ export default function LandingPage() {
                 <Moon className='h-5 w-5' />
               )}
             </Button>
-            <Button variant='secondary' className='z-10'>
-              Get a consultation today!
-            </Button>
+            <CalendlyLink>
+              <Button variant='secondary' className='z-10'>
+                Get a consultation today!
+              </Button>
+            </CalendlyLink>
           </div>
         </div>
       </header>
       <main>
         <section className='overflow-hidden h-[60rem] position-relative'>
-          <div className='container mx-auto py-16 md:py-24 '>
+          <div className='container mx-auto py-8'>
             <div className='grid md:grid-cols-2 gap-12 items-start'>
               <div className='flex flex-col'>
                 <Badge variant='secondary' className='mb-4 self-start'>
@@ -133,26 +102,36 @@ export default function LandingPage() {
                   remove inaccurate items from your credit report. Start your
                   journey to better credit today.
                 </p>
-                <div className='mt-auto z-10'>
+                <div className='z-10 mt-[26px]'>
                   <AnimatedTestimonials testimonials={testimonials} />
                 </div>
               </div>
-              <div className='flex flex-col z-10'>
+              <div className='flex flex-col z-10 relative -top-24'>
                 <Image
                   src='/meter.svg'
                   alt='Credit Score Improvement Visualization'
                   width={800}
                   height={600}
-                  className='w-full h-auto mb-8'
+                  className='w-full h-auto'
                   priority
                 />
-                <div className='mt-auto'>
-                  <Button
-                    size='lg'
-                    className='bg-purple-600 hover:bg-purple-700 text-white text-xl py-6 px-12 w-full md:w-auto z-10'
-                  >
-                    Let&apos;s get started now!
-                  </Button>
+                <div>
+                  <Badge variant='secondary' className='mb-8'>
+                    Scheudule a Consultation
+                  </Badge>
+                  <h1 className='text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6'>
+                    Don&apos;t wait to get started.
+                    <br />
+                    Scheudle your call today and watch your score grow
+                  </h1>
+                  <CalendlyLink>
+                    <Button
+                      size='lg'
+                      className='bg-indigo-500 hover:bg-indigo-500 text-white font-bold text-xl py-6 px-12 w-full md:w-auto z-10 float-right mr-16'
+                    >
+                      Schedule Consultation
+                    </Button>
+                  </CalendlyLink>
                 </div>
               </div>
             </div>
@@ -177,7 +156,7 @@ export default function LandingPage() {
             </div>
             <div className='grid md:grid-cols-3 gap-8'>
               <Card className='bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6'>
-                <CheckCircle className='h-12 w-12 text-purple-500 mb-4' />
+                <CheckCircle className='h-12 w-12 text-indigo-500 mb-4' />
                 <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-4'>
                   Credit Report Analysis
                 </h3>
@@ -187,7 +166,7 @@ export default function LandingPage() {
                 </p>
               </Card>
               <Card className='bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6'>
-                <Shield className='h-12 w-12 text-purple-500 mb-4' />
+                <Shield className='h-12 w-12 text-indigo-500 mb-4' />
                 <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-4'>
                   Dispute Resolution
                 </h3>
@@ -197,7 +176,7 @@ export default function LandingPage() {
                 </p>
               </Card>
               <Card className='bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 p-6'>
-                <TrendingUp className='h-12 w-12 text-purple-500 mb-4' />
+                <TrendingUp className='h-12 w-12 text-indigo-500 mb-4' />
                 <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-4'>
                   Score Improvement
                 </h3>
@@ -228,7 +207,7 @@ export default function LandingPage() {
               {[
                 {
                   step: '1',
-                  title: 'Free Consultation',
+                  title: 'Schedule a Consultation',
                   description:
                     'We review your situation and explain how we can help.'
                 },
@@ -249,8 +228,8 @@ export default function LandingPage() {
                 }
               ].map((item) => (
                 <div key={item.step} className='relative'>
-                  <div className='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6'>
-                    <div className='w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mb-4'>
+                  <div className='bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 h-48'>
+                    <div className='w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold mb-4'>
                       {item.step}
                     </div>
                     <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
@@ -280,15 +259,17 @@ export default function LandingPage() {
                 and start your journey to financial freedom.
               </p>
               <div className='flex gap-4 justify-center'>
-                <Button
-                  size='lg'
-                  className='bg-purple-600 hover:bg-purple-700 text-white'
-                >
-                  Schedule Consultation
-                </Button>
-                <Button variant='outline' size='lg'>
+                <CalendlyLink>
+                  <Button
+                    size='lg'
+                    className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold text-xl'
+                  >
+                    Schedule Consultation
+                  </Button>
+                </CalendlyLink>
+                {/* <Button variant='outline' size='lg'>
                   Learn More
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -305,24 +286,9 @@ export default function LandingPage() {
               </span>
             </div>
             <div className='flex gap-6'>
-              <Link
-                href='/privacy'
-                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm'
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href='/terms'
-                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm'
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href='/contact'
-                className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-sm'
-              >
-                Contact Us
-              </Link>
+              <PrivacyPolicy />
+              <TermsOfService />
+              <ContactForm />
             </div>
           </div>
         </div>

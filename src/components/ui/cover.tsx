@@ -31,7 +31,7 @@ export const Cover = ({
       )
       setBeamPositions(positions)
     }
-  }, [ref.current])
+  }, [])
 
   return (
     <div
@@ -212,6 +212,7 @@ export const Beam = ({
 
 export const CircleIcon = ({
   className,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   delay
 }: {
   className?: string

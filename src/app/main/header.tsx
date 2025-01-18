@@ -36,10 +36,10 @@ const Header = () => {
             </Link>
           </nav>
 
-          <div className='order-1 md:order-none'>
+          <div className='order-1 md:order-none z-10'>
             <a
               href='https://www.instagram.com/dcreditninja/'
-              className=' text-gray-300 hover:text-gray-300 transition-colors'
+              className=' text-gray-300 hover:text-gray-300 transition-colors z-10'
             >
               <svg
                 role='img'

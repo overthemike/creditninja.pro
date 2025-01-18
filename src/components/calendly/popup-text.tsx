@@ -82,7 +82,7 @@ const CalendlyLink = ({ children }: CalendlyLinkProps) => {
   }
 
   return (
-    <div onClick={handleClick} style={{ cursor: 'pointer' }}>
+    <div onClick={handleClick} className='p-4 md:p-0 cursor-pointer'>
       {children}
     </div>
   )

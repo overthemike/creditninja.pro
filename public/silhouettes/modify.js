@@ -1,3 +1,5 @@
+'use client'
+
 const fs = require('fs/promises')
 const path = require('path')
 const { JSDOM } = require('jsdom') // You'll need to: npm install jsdom

@@ -6,6 +6,11 @@ import Services from './services'
 import Process from './process'
 import Getstarted from './getstarted'
 import Footer from './Footer'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'CreditNinja.pro - Credit Repair Services'
+}
 
 export default function LandingPage() {
   return (

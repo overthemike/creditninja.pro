@@ -3,7 +3,7 @@ import Hero from './hero'
 import Services from './services'
 import Process from './process'
 import Getstarted from './getstarted'
-import Footer from './footer'
+import Footer from './Footer'
 
 export default function LandingPage() {
   return (

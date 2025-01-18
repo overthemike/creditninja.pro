@@ -88,11 +88,9 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className='text-lg font-semibold mb-2'>6. Contact Us</h2>
             <p>
-              If you have any questions about this Privacy Policy, please email
-              us at:
-            </p>
-            <p className='mt-2'>
-              <a href='mailto:dgreditninja@gmail.com'>dgreditninja@gmail.com</a>
+              If you have any questions about this Privacy Policy, please
+              contact us using the contact form by clicking &quot;Contact
+              Us&quot; on the main page.
             </p>
           </section>
 

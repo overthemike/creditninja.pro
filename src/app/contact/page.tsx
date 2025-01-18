@@ -17,11 +17,52 @@ const ContactForm = () => {
     preferredContact: 'email'
   })
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Type for the submit event
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Here you would add your form submission logic
-    console.log('Form submitted:', formData)
-    // You could send this to your API endpoint, email service, etc.
+
+    try {
+      const message = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Phone: ${formData.phone}
+      Preferred Contact: ${formData.preferredContact}
+      Message:
+      ${formData.message}
+    `
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'afb58857-6d10-499b-a0fb-78edc9b5a52f',
+          name: formData.name,
+          email: formData.email,
+          message
+        })
+      })
+
+      const result = await response.json()
+      if (result.success) {
+        // Clear form after successful submission
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          preferredContact: 'email'
+        })
+        alert('Message sent successfully!') // Or use a better notification system
+      } else {
+        throw new Error('Failed to send message')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Failed to send message. Please try again.')
+    }
   }
 
   const handleChange = (
@@ -60,7 +101,7 @@ const ContactForm = () => {
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
-                className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary'
+                className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary text-gray-950'
                 required
               />
             </div>
@@ -76,7 +117,7 @@ const ContactForm = () => {
                 name='email'
                 value={formData.email}
                 onChange={handleChange}
-                className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary'
+                className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary text-gray-950'
                 required
               />
             </div>
@@ -93,7 +134,7 @@ const ContactForm = () => {
               name='phone'
               value={formData.phone}
               onChange={handleChange}
-              className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary'
+              className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary text-gray-950'
             />
           </div>
 
@@ -110,7 +151,7 @@ const ContactForm = () => {
               name='preferredContact'
               value={formData.preferredContact}
               onChange={handleChange}
-              className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary'
+              className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary text-gray-950'
             >
               <option value='email'>Email</option>
               <option value='phone'>Phone</option>
@@ -128,7 +169,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary'
+              className='w-full rounded-md border border-gray-300 p-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary text-gray-950'
               required
             />
           </div>

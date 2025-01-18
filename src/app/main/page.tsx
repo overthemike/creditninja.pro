@@ -5,7 +5,7 @@ import Hero from './hero'
 import Services from './services'
 import Process from './process'
 import Getstarted from './getstarted'
-import Footer from './Footer'
+import Footer from './footer'
 
 export default function LandingPage() {
   return (

@@ -118,10 +118,9 @@ const TermsOfService = () => {
               9. Contact Information
             </h2>
             <p>
-              For questions about these Terms of Service, please email us at:
-            </p>
-            <p className='mt-2'>
-              <a href='mailto:dgreditninja@gmail.com'>dgreditninja@gmail.com</a>
+              For questions about these Terms of Service, please contact us
+              using the contact form by clicking &quot;Contact Us&quot; on the
+              main page.
             </p>
           </section>
 

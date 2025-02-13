@@ -47,7 +47,7 @@ const Hero = () => (
             <h1 className='text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 px-4 md:px-0'>
               Don&apos;t wait to get started.
               <br />
-              Scheudle your call today and watch your score grow!
+              Schedule your call today and watch your score grow!
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 viewBox='0 0 24 24'

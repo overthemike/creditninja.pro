@@ -76,7 +76,7 @@ const CalendlyLink = ({ children }: CalendlyLinkProps) => {
     await loadCalendlyScripts() // Ensure scripts are loaded before initializing
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/dcreditninja/30min?background_color=0f172a&text_color=f8fafc&primary_color='
+        url: 'https://calendly.com/ninjaconsultings/30min?background_color=0f172a&text_color=f8fafc&primary_color='
       })
     }
   }

@@ -46,7 +46,7 @@ const CalendlyBadge = () => {
     function initBadgeWidget() {
       if (window.Calendly) {
         window.Calendly.initBadgeWidget({
-          url: 'https://calendly.com/dcreditninja/30min?background_color=0f172a&text_color=f8fafc&primary_color=7c3aed',
+          url: 'https://calendly.com/ninjaconsultings/30min?background_color=0f172a&text_color=f8fafc&primary_color=7c3aed',
           text: 'Schedule time with me',
           color: '#7c3aed',
           textColor: '#f8fafc'

@@ -20,7 +20,7 @@ const Calendly = () => {
   return (
     <div
       className='calendly-inline-widget'
-      data-url='https://calendly.com/dcreditninja/30min?background_color=0f172a&text_color=f8fafc&primary_color=7c3aed'
+      data-url='https://calendly.com/ninjaconsultings/30min?background_color=0f172a&text_color=f8fafc&primary_color=7c3aed'
       style={{ minWidth: 320, height: 1200 }}
     />
   )

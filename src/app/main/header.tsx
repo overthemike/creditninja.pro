@@ -38,7 +38,7 @@ const Header = () => {
 
           <div className='order-1 md:order-none z-10'>
             <a
-              href='https://www.instagram.com/dcreditninja/'
+              href='https://www.instagram.com/credit_ninja/'
               className=' text-gray-300 hover:text-gray-300 transition-colors z-10'
             >
               <svg

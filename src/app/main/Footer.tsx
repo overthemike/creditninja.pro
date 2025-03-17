@@ -15,7 +15,7 @@ const Footer = () => (
         </div>
         <div className='-order-1 md:order-none'>
           <a
-            href='https://www.instagram.com/dcreditninja/'
+            href='https://www.instagram.com/credit_ninja/'
             className=' text-gray-300 hover:text-gray-300 transition-colors'
           >
             <svg

@@ -28,12 +28,12 @@ const Header = () => {
             >
               Our Process
             </Link>
-            <Link
+            {/* <Link
               href='#testimonials'
               className='text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
             >
               Testimonials
-            </Link>
+            </Link> */}
           </nav>
 
           <div className='order-1 md:order-none z-10'>

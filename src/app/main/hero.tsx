@@ -1,11 +1,11 @@
 import CalendlyLink from '@/components/calendly/popup-text'
-import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
+// import { AnimatedTestimonials } from '@/components/ui/animated-testimonials'
 import { Button } from '@/components/ui/button'
 import { Cover } from '@/components/ui/cover'
 import { ShootingStars } from '@/components/ui/shooting-stars'
 import { StarsBackground } from '@/components/ui/stars-background'
 import { Badge } from '@/components/ui/badge'
-import testimonials from '../testimonials'
+// import testimonials from '../testimonials'
 import Image from 'next/image'
 
 const Hero = () => (
@@ -27,9 +27,9 @@ const Hero = () => (
             inaccurate items from your credit report. Start your journey to
             better credit today.
           </p>
-          <div className='z-10 md:mt-[26px]'>
+          {/* <div className='z-10 md:mt-[26px]'>
             <AnimatedTestimonials testimonials={testimonials} />
-          </div>
+          </div> */}
         </div>
         <div className='flex flex-col z-10 relative -top-24'>
           <Image

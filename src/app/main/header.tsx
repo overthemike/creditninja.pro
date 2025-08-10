@@ -11,7 +11,7 @@ const Header = () => {
           <Link href='/' className='flex items-center gap-2 shrink-0'>
             <NinjaLogo className='w-8 h-8 fill-gray-900 dark:fill-white' />
             <span className='hidden md:inline-block text-gray-900 dark:text-white font-bold text-xl'>
-              CreditNinja.pro
+              CreditProNinja.com
             </span>
           </Link>
 

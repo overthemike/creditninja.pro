@@ -1,14 +1,14 @@
 const testimonials = [
   {
     quote:
-      'CreditNinja.pro helped me raise my score by 85 points in just three months. Their expertise in handling old collections accounts was invaluable.',
+      'CreditProNinja.com helped me raise my score by 85 points in just three months. Their expertise in handling old collections accounts was invaluable.',
     name: 'Robert Martinez',
     designation: 'Small Business Owner',
     src: '/ninjas/ninja1_with_bg.svg'
   },
   {
     quote:
-      'After my divorce, my credit was in shambles. CreditNinja.pro helped me dispute inaccurate items and my score jumped 120 points. I finally qualified for a home loan!',
+      'After my divorce, my credit was in shambles. CreditProNinja.com helped me dispute inaccurate items and my score jumped 120 points. I finally qualified for a home loan!',
     name: 'Amanda Chen',
     designation: 'Healthcare Professional',
     src: '/ninjas/ninja2_with_bg.svg'
@@ -43,7 +43,7 @@ const testimonials = [
   },
   {
     quote:
-      'After years of struggling with poor credit, CreditNinja.pro helped me challenge and remove multiple outdated items. My score improved by 130 points.',
+      'After years of struggling with poor credit, CreditProNinja.com helped me challenge and remove multiple outdated items. My score improved by 130 points.',
     name: 'James Wilson',
     designation: 'Sales Manager',
     src: '/ninjas/ninja7_with_bg.svg'
@@ -78,7 +78,7 @@ const testimonials = [
   },
   {
     quote:
-      'After my bankruptcy, I thought my credit was beyond repair. CreditNinja.pro helped me rebuild my score from 520 to 680 in just one year.',
+      'After my bankruptcy, I thought my credit was beyond repair. CreditProNinja.com helped me rebuild my score from 520 to 680 in just one year.',
     name: 'Linda Morrison',
     designation: 'Store Owner',
     src: '/ninjas/ninja12_with_bg.svg'
@@ -99,7 +99,7 @@ const testimonials = [
   },
   {
     quote:
-      "I never thought I'd see my credit score above 700, but CreditNinja.pro made it happen. Their expertise in handling medical collections was crucial.",
+      "I never thought I'd see my credit score above 700, but CreditProNinja.com made it happen. Their expertise in handling medical collections was crucial.",
     name: 'Andrew Kim',
     designation: 'Restaurant Owner',
     src: '/ninjas/ninja15_with_bg.svg'

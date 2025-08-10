@@ -10,7 +10,7 @@ const Footer = () => (
         <div className='flex items-center gap-2'>
           <NinjaLogo className='w-6 h-6 fill-gray-900 dark:fill-white' />
           <span className='text-gray-600 dark:text-gray-300'>
-            © {new Date().getFullYear()} CreditNinja.pro
+            © {new Date().getFullYear()} CrediProNinja.com
           </span>
         </div>
         <div className='-order-1 md:order-none'>
